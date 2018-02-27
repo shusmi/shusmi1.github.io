@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+   
+    var y = document.forms["myForm"]["id"].value;
+    if (y == "") {
+        alert("id must be filled out");
+        return false;
+    }
+   
+    var z = document.forms["myForm"]["age"].value;
+    if (z == "") {
+        alert("age must be filled out");
+        return false;
+    }
+    
+    var a = document.forms["myForm"]["phone no"].value;
+    if (a == "") {
+        alert("phone no must be filled out");
+        return false;
+        
+    }
+    if(a.length!=11){
+    alart("phnone no not correct");
+    return false;
+    }
+    
+   
+    var b = document.forms["myForm"]["address"].value;
+    if (b == "") {
+        alert("address must be filled out");
+        return false;
+    }
+    
+    
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+Name: <input type="text" name="fname">
+
+</form>
+<br/>
+<form id="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+id: <input type="number" name="id">
+
+</form>
+<br/>
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+age: <input type="number" name="age">
+
+</form>
+<br/>
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+phone no: <input type="number" name="phone no">
+
+</form>
+<br/>
+<form name="myForm" action="/action_page.php"
+onsubmit="return validateForm()" method="post">
+address: <input type="text" name="address">
+<br/>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
